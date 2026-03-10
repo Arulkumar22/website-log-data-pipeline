@@ -1,0 +1,55 @@
+SELECT COUNT(*) AS total_events
+FROM website_logs;
+
+SELECT COUNT(DISTINCT user_id) AS unique_users
+FROM website_logs;
+
+SELECT COUNT(DISTINCT session_id) AS total_sessions
+FROM website_logs;
+
+SELECT event_type, COUNT(*) AS total_events
+FROM website_logs
+GROUP BY event_type
+ORDER BY total_events DESC;
+
+SELECT page_url, COUNT(*) AS visit_count
+FROM website_logs
+GROUP BY page_url
+ORDER BY visit_count DESC;
+
+SELECT device_type, COUNT(*) AS total_traffic
+FROM website_logs
+GROUP BY device_type
+ORDER BY total_traffic DESC;
+
+SELECT browser, ROUND(AVG(response_time), 2) AS avg_response_time
+FROM website_logs
+GROUP BY browser
+ORDER BY avg_response_time DESC;
+
+SELECT status_code, COUNT(*) AS error_count
+FROM website_logs
+WHERE status_code >= 400
+GROUP BY status_code
+ORDER BY error_count DESC;
+
+SELECT event_hour, COUNT(*) AS total_events
+FROM website_logs
+GROUP BY event_hour
+ORDER BY total_events DESC;
+
+SELECT event_date, COUNT(DISTINCT user_id) AS daily_active_users
+FROM website_logs
+GROUP BY event_date
+ORDER BY event_date;
+
+SELECT page_url, COUNT(*) AS slow_requests
+FROM website_logs
+WHERE response_category = 'slow'
+GROUP BY page_url
+ORDER BY slow_requests DESC;
+
+SELECT country, COUNT(*) AS total_events
+FROM website_logs
+GROUP BY country
+ORDER BY total_events DESC;
