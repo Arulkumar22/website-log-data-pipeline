@@ -40,4 +40,3 @@ Raw Log Data → Data Cleaning (Python) → MySQL Database → SQL Analysis → 
 ## Author
 
 Arulkumar I  
-B.Tech Artificial Intelligence and Data Science
