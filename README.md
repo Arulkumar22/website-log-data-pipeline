@@ -25,10 +25,10 @@ Raw Log Data → Data Cleaning (Python) → MySQL Database → SQL Analysis → 
 ## Dashboard Preview
 
 ### Traffic Overview
-![Traffic Overview](images/page1_dashboard.png)
+!["D:\LOG  User Project\Images\image 1.png"])
 
 ### User Activity Analysis
-![User Activity](images/page2_dashboard.png)
+!["D:\LOG  User Project\Images\image 2.png"])
 
 ### Error Monitoring
 ![Error Monitoring](images/page3_dashboard.png)
